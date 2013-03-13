@@ -1,6 +1,10 @@
 # SequelActsAsVersionable
 
-TODO: Write a gem description
+This gem is a port of Carlos Segura's acts_as_versionable at https://github.com/csegura/acts_as_versionable.
+
+His gem is a plugin for ActiveRecord and I merely ported his code to a Sequel ORM plugin.
+
+
 
 ## Installation
 
@@ -18,7 +22,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+class Thingy < Sequel::Model
+    plugin :acts_as_versionable
+
+    def before_validation
+        super #note: you must call super if you implement before_validation for this plugin to work
+        ..... your code
+    end
+
+    def validate
+        super #note: you must call super if you implement validate for this plugin to work
+        .... your code
+    end
+end
+
+
+I will provide some usage examples in the future. In the meantime, you can refer to https://github.com/csegura/acts_as_versionable
+as my plugin is using the same exact interface.
+
 
 ## Contributing
 
