@@ -42,7 +42,7 @@ as my plugin is using the same exact interface.
 
 ## Example migration
 
-Any model you this plugin on will require a migration...
+Any model you use this plugin on will require a migration...
 
     Sequel.migration do
       up do
