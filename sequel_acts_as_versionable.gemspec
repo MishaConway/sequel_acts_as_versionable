@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["MishaAConway@gmail.com"]
   gem.description   = %q{Versioning for Sequel ORM models. Port of Carlos Segura's acts_as_versionable.}
   gem.summary       = %q{Versioning for Sequel ORM models. Port of Carlos Segura's acts_as_versionable.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/MishaConway/sequel_acts_as_versionable"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
