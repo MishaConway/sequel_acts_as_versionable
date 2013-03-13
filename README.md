@@ -40,6 +40,26 @@ Or install it yourself as:
 I will provide some usage examples in the future. In the meantime, you can refer to https://github.com/csegura/acts_as_versionable
 as my plugin is using the same exact interface.
 
+## Example migration
+
+Any model you this plugin on will require a migration...
+
+    Sequel.migration do
+      up do
+        alter_table :thingies do
+          add_column :version_number, Integer, :default => 0
+          add_column :version_id, Integer
+        end
+      end
+
+      down do
+        alter_table :thingies do
+          drop_column :version_number
+          drop_column :version_id
+        end
+      end
+    end
+
 
 ## Contributing
 
