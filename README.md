@@ -22,19 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-class Thingy < Sequel::Model
-    plugin :acts_as_versionable
+    class Thingy < Sequel::Model
+        plugin :acts_as_versionable
 
-    def before_validation
-        super #note: you must call super if you implement before_validation for this plugin to work
-        ..... your code
-    end
+        def before_validation
+            super #note: you must call super if you implement before_validation for this plugin to work
+            ..... your code
+        end
 
-    def validate
-        super #note: you must call super if you implement validate for this plugin to work
-        .... your code
+        def validate
+            super #note: you must call super if you implement validate for this plugin to work
+            .... your code
+        end
     end
-end
 
 
 I will provide some usage examples in the future. In the meantime, you can refer to https://github.com/csegura/acts_as_versionable
